@@ -11,10 +11,14 @@ class R {
   static final String resAssetsHomeN = 'res/assets/home_n.png';
   /// ![](http://127.0.0.1:9527/res/assets/home_s.png)
   static final String resAssetsHomeS = 'res/assets/home_s.png';
+  /// ![](http://127.0.0.1:9527/res/assets/hot.png)
+  static final String resAssetsHot = 'res/assets/hot.png';
   /// ![](http://127.0.0.1:9527/res/assets/my_n.png)
   static final String resAssetsMyN = 'res/assets/my_n.png';
   /// ![](http://127.0.0.1:9527/res/assets/my_s.png)
   static final String resAssetsMyS = 'res/assets/my_s.png';
+  /// ![](http://127.0.0.1:9527/res/assets/qiandao.png)
+  static final String resAssetsQiandao = 'res/assets/qiandao.png';
   /// ![](http://127.0.0.1:9527/res/assets/sales_n.png)
   static final String resAssetsSalesN = 'res/assets/sales_n.png';
   /// ![](http://127.0.0.1:9527/res/assets/sales_s.png)

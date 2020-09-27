@@ -1,16 +1,8 @@
 # flutter_runkang
 
-A new Flutter project.
+一个属于学习flutter的项目，打算把之前写过的原生项目用flutter重写一遍.
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+项目中暂时还未涉及接口，所以可以开源，感兴趣的同学可以clone下来直接run，我一有时间就会尝试去完善功能，目前项目还处于初级阶段，我会持续更新。
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.

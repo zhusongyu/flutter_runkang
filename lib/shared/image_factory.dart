@@ -16,4 +16,6 @@ class ImageFactory {
   static final device = Image.asset(R.resAssetsShebei, width: 30, height: 30,);
   static final life = Image.asset(R.resAssetsShenghuo, width: 30, height: 30,);
   static final message = Image.asset(R.resAssetsZixun, width: 30, height: 30,);
+  static final hot = Image.asset(R.resAssetsHot, width: 44, height: 40,);
+  static final signin = Image.asset(R.resAssetsQiandao, width: 44, height: 40,);
 }

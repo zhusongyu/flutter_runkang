@@ -2,6 +2,7 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_runkang/shared/image_factory.dart';
+import 'package:flutter_runkang/widgets/point_cell.dart';
 import '../widgets/icon_text_button.dart';
 
 class HomePage extends StatefulWidget {
@@ -52,7 +53,10 @@ class HomePageState extends State<HomePage> {
                     SizedBox(
                       width: 5,
                     ),
-                    Text('精选消息', style: TextStyle(color: Colors.blue),)
+                    Text(
+                      '精选消息',
+                      style: TextStyle(color: Colors.blue),
+                    )
                   ],
                 ),
                 SizedBox(
@@ -135,7 +139,10 @@ class HomePageState extends State<HomePage> {
                   SizedBox(
                     width: 5,
                   ),
-                  Text('积分管理', style: TextStyle(color: Colors.blue),)
+                  Text(
+                    '积分管理',
+                    style: TextStyle(color: Colors.blue),
+                  )
                 ],
               ),
               SizedBox(
@@ -145,7 +152,14 @@ class HomePageState extends State<HomePage> {
                 height: 0.5,
                 color: Colors.black12,
               ),
-              Text('积分管理', )
+              PointCell(
+                text: '签到领积分',
+                subText: '积分兑海量商品',
+                image: ImageFactory.hot,
+                onTap: () {
+                  print('object');
+                },
+              )
             ],
           ),
         )

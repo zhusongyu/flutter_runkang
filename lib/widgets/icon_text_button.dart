@@ -23,22 +23,3 @@ class IconTextButton extends StatelessWidget {
     );
   }
 }
-
-// class IconTextButtonState extends State<IconTextButton> {
-//   @override
-//   Widget build(BuildContext context) {
-//     // TODO: implement build
-//     return GestureDetector(
-//       onTap: widget.onTap,
-//       child: Column(
-//         children: [
-//           widget.image,
-//           SizedBox(
-//             height: 5,
-//           ),
-//           Text(widget.text)
-//         ],
-//       ),
-//     );
-//   }
-// }
