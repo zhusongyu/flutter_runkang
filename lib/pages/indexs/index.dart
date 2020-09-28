@@ -93,7 +93,7 @@ class _IndexState extends State<Index> with TickerProviderStateMixin {
 
     return new MaterialApp(
       home: new Scaffold(
-        appBar: AppBar(title: Text(_titles[_currentIndex]),),
+        appBar: AppBar(title: Text(_titles[_currentIndex]), backgroundColor: Colors.black,),
         body: new Center(child: _currentPage),
         bottomNavigationBar: bottomNavigationBar,
         
