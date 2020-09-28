@@ -15,7 +15,6 @@ class PointCell extends StatelessWidget {
         onTap: onTap,
         child: Row(
           children: [
-            SizedBox(width: 10,),
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -26,7 +25,7 @@ class PointCell extends StatelessWidget {
                 Text(subText)
               ],
             ),
-            SizedBox(width: 30,),
+            SizedBox(width: 10,),
             image
           ],
         ));

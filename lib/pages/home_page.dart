@@ -3,6 +3,8 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:flutter_runkang/shared/image_factory.dart';
 import 'package:flutter_runkang/widgets/point_cell.dart';
+import 'package:flutter_swiper/flutter_swiper.dart';
+import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 import '../widgets/icon_text_button.dart';
 
 class HomePage extends StatefulWidget {
@@ -14,6 +16,7 @@ class HomePage extends StatefulWidget {
 }
 
 class HomePageState extends State<HomePage> {
+  final controller = PageController(viewportFraction: 1);
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
@@ -24,11 +27,15 @@ class HomePageState extends State<HomePage> {
         Container(
           width: size.width,
           height: 200,
-          child: PageView(children: [
-            ImageFactory.head,
-            ImageFactory.head1,
-            ImageFactory.head2
-          ]),
+          child: Swiper.children(
+            children: [
+              ImageFactory.head,
+              ImageFactory.head1,
+              ImageFactory.head2
+            ],
+            autoplay: true,
+            pagination: SwiperPagination(),
+          ),
         ),
         SizedBox(
           height: 10,
@@ -85,31 +92,34 @@ class HomePageState extends State<HomePage> {
                 SizedBox(
                   height: 10,
                 ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
-                    IconTextButton(
-                      text: '健康生活',
-                      image: ImageFactory.life,
-                      onTap: () {
-                        print('object');
-                      },
-                    ),
-                    IconTextButton(
-                      text: '美食养生',
-                      image: ImageFactory.message,
-                      onTap: () {
-                        print('object');
-                      },
-                    ),
-                    IconTextButton(
-                      text: '设备',
-                      image: ImageFactory.device,
-                      onTap: () {
-                        print('object');
-                      },
-                    )
-                  ],
+                Padding(
+                  padding: EdgeInsets.fromLTRB(20, 0, 20, 0),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      IconTextButton(
+                        text: '健康生活',
+                        image: ImageFactory.life,
+                        onTap: () {
+                          print('object');
+                        },
+                      ),
+                      IconTextButton(
+                        text: '美食养生',
+                        image: ImageFactory.message,
+                        onTap: () {
+                          print('object');
+                        },
+                      ),
+                      IconTextButton(
+                        text: '设备',
+                        image: ImageFactory.device,
+                        onTap: () {
+                          print('object');
+                        },
+                      )
+                    ],
+                  ),
                 ),
                 SizedBox(
                   height: 10,
@@ -152,13 +162,34 @@ class HomePageState extends State<HomePage> {
                 height: 0.5,
                 color: Colors.black12,
               ),
-              PointCell(
-                text: '签到领积分',
-                subText: '积分兑海量商品',
-                image: ImageFactory.hot,
-                onTap: () {
-                  print('object');
-                },
+              Padding(
+                padding: EdgeInsets.all(10),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    PointCell(
+                      text: '签到领积分',
+                      subText: '积分兑海量商品',
+                      image: ImageFactory.signin,
+                      onTap: () {
+                        print('object');
+                      },
+                    ),
+                    Container(
+                      width: 0.5,
+                      height: 40,
+                      color: Colors.black12,
+                    ),
+                    PointCell(
+                      text: '分享奖励计划',
+                      subText: '积分规则全面解析',
+                      image: ImageFactory.hot,
+                      onTap: () {
+                        print('object');
+                      },
+                    )
+                  ],
+                ),
               )
             ],
           ),
