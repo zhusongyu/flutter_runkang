@@ -36,12 +36,12 @@ class _IndexState extends State<Index> with TickerProviderStateMixin {
         activeIcon: ImageFactory.tabStoreS,
         vsync: this,
       ),
-      // new NavigationIconView(
-      //   icon: Image.asset('name'),
-      //   title: new Text("购物车"),
-      //   activeIcon: Image.asset('name'),
-      //   vsync: this,
-      // ),
+      new NavigationIconView(
+        icon: ImageFactory.tabSalesN,
+        title: new Text("分享"),
+        activeIcon: ImageFactory.tabSaleS,
+        vsync: this,
+      ),
       // new NavigationIconView(
       //   icon: Image.asset('name'),
       //   title: new Text("个人中心"),

@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_runkang/shared/image_factory.dart';
 import 'package:flutter_runkang/widgets/point_cell.dart';
 import 'package:flutter_swiper/flutter_swiper.dart';
+import 'package:provider/provider.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 import '../widgets/icon_text_button.dart';
 
@@ -17,8 +18,12 @@ class HomePage extends StatefulWidget {
 
 class HomePageState extends State<HomePage> {
   final controller = PageController(viewportFraction: 1);
+
   @override
   Widget build(BuildContext context) {
+    print('homepage build');
+    // final _counter = Provider.of<MyModel>(context);
+    
     final size = MediaQuery.of(context).size;
     // TODO: implement build
     return Container(
@@ -188,6 +193,8 @@ class HomePageState extends State<HomePage> {
                         print('object');
                       },
                     )
+                    
+                    ,
                   ],
                 ),
               )
@@ -198,3 +205,13 @@ class HomePageState extends State<HomePage> {
     );
   }
 }
+
+// class MyModel with ChangeNotifier {
+//   MyModel({this.count = 0});
+//   int count = 0;
+
+//   void incrementCounter() {
+//     count = count + 1;
+//     notifyListeners();
+//   }
+// }

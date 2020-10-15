@@ -1,5 +1,7 @@
+import 'package:fluro/fluro.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_runkang/pages/login_page.dart';
+import 'package:flutter_runkang/coordinator/application.dart';
+import 'package:flutter_runkang/requests/routes.dart';
 import 'package:flutter_runkang/shared/image_factory.dart';
 import 'package:flutter_runkang/widgets/pager_tab.dart';
 import 'package:pull_to_refresh/pull_to_refresh.dart';
@@ -120,32 +122,39 @@ class ShopItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Container(
-          width: 200,
-          height: 150,
-          child: ImageFactory.head,
-        ),
-        Text(
-          ' 商品名称',
-          textAlign: TextAlign.left,
-        ),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            Text(
-              ' ¥10',
-              style: TextStyle(color: Colors.red),
-            ),
-            Text(
-              '0积分 ',
-              style: TextStyle(color: Colors.orange),
-            )
-          ],
-        ),
-      ],
+    // final _counter = Provider.of<MyModel>(context);
+
+    return GestureDetector(
+      onTap: () {
+        Application.router.navigateTo(context, Routes.ShopDetailWeb, transition: TransitionType.cupertino);
+      },
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Container(
+            width: 200,
+            height: 150,
+            child: ImageFactory.head,
+          ),
+          Text(
+            ' 商品名称',
+            textAlign: TextAlign.left,
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Text(
+                ' ¥10',
+                style: TextStyle(color: Colors.red),
+              ),
+              Text(
+                '0积分 ',
+                style: TextStyle(color: Colors.orange),
+              )
+            ],
+          ),
+        ],
+      ),
     );
   }
 }

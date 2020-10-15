@@ -1,8 +1,20 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_runkang/pages/home_page.dart';
 import 'package:flutter_runkang/pages/indexs/index.dart';
 import 'package:flutter_runkang/pages/login_page.dart';
+import 'package:flutter_runkang/requests/routes.dart';
+import 'package:provider/provider.dart';
 
 void main() {
+  // final counter = MyModel();
+
+  // runApp(
+  //   ChangeNotifierProvider<MyModel>.value(
+  //     value: counter,
+  //     child: MyApp(),
+  //   ),
+  // );
+  Routes.configRouters();
   runApp(MyApp());
 }
 
