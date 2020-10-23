@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_runkang/pages/home_page.dart';
 import 'package:flutter_runkang/pages/indexs/index.dart';
 import 'package:flutter_runkang/pages/login_page.dart';
-import 'package:flutter_runkang/requests/routes.dart';
+import 'package:flutter_runkang/coordinator/routes.dart';
 import 'package:provider/provider.dart';
 
 void main() {
@@ -22,7 +22,8 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return Index();
+    // return Index();
+      return LoginPage();
     // return MaterialApp(
     //   title: 'Flutter Demo',
     //   theme: ThemeData(

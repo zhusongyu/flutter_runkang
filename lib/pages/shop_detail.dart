@@ -9,6 +9,6 @@ class ShopDetailWebView extends StatelessWidget {
     // TODO: implement build
     return Scaffold(appBar: AppBar(title: Text('商品详情'),), body: WebView(
       initialUrl: 'https://flutter.cn',
-    ),) ;
+    ),);
   }
 }

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_runkang/pages/home_page.dart';
+import 'package:flutter_runkang/pages/share_page.dart';
 import 'package:flutter_runkang/pages/shop_page.dart';
 import 'package:flutter_runkang/shared/image_factory.dart';
 import 'navigation_icon_view.dart';
@@ -21,7 +22,7 @@ class _IndexState extends State<Index> with TickerProviderStateMixin {
   @override
   void initState() {
     super.initState();
-    _titles = ['首页', '商城'];
+    _titles = ['首页', '商城', '分享'];
 
     _navigationViews = <NavigationIconView>[
       new NavigationIconView(
@@ -56,6 +57,7 @@ class _IndexState extends State<Index> with TickerProviderStateMixin {
     _pageList = <StatefulWidget>[
       new HomePage(),
       new ShopPage(),
+      new SharePage()
     ];
     _currentPage = _pageList[_currentIndex];
   }
